@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesezeichen durchsuchen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Lesezeichen durchsuchen</h1>
+  <input type="text" id="searchInput" placeholder="Gib deine Suchanfrage ein..." autofocus>
+  
+  <h2>Ergebnisse</h2>
+  <ul id="results"></ul>
+
+  <!-- Bereich zum Hinzufügen von Tags -->
+  <div id="tagSection" style="display:none;">
+    <h3>Tags hinzufügen:</h3>
+    <input type="text" id="tagInput" placeholder="Neue Tags hinzufügen...">
+    <button id="saveTagButton">Speichern</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
