@@ -11,37 +11,29 @@ function saveTags(bookmarkId, newTags) {
   });
 }
 
-// Funktion zur Generierung von 10 Tags durch GPT-3.5-Turbo
+// Funktion zur Generierung von 10 Tags durch deinen Proxy-Server
 async function generateTags(bookmarkTitle, bookmarkUrl) {
-  const API_KEY = 'YOUR API KEY'; // Ersetze durch deinen OpenAI API-Schlüssel
-  const prompt = `Generate 10 relevant keywords or tags based on this bookmark title and URL:\nTitle: "${bookmarkTitle}"\nURL: ${bookmarkUrl}`;
+  const serverUrl = 'https://lomtech-apiserver-90.deno.dev/'; // Ersetze durch die URL deines Deno-Proxy-Servers
   
   try {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch(serverUrl, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${API_KEY}`
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [
-          { role: "system", content: "You are a helpful assistant that generates keywords or tags based on the given title and URL." },
-          { role: "user", content: prompt }
-        ],
-        max_tokens: 100,
-        temperature: 0.7
+        bookmarkTitle, // Titel des Lesezeichens
+        bookmarkUrl    // URL des Lesezeichens
       })
     });
     
     const data = await response.json();
     
-    // Inhalt extrahieren und in Tags aufteilen
-    const content = data.choices[0].message.content.trim();
-    const tags = content.split(',').map(tag => tag.trim()).slice(0, 10); // Nimmt nur die ersten 10 Tags
+    // Tags vom Server empfangen und aufteilen
+    const tags = data.tags || [];
     return tags;
   } catch (error) {
-    console.error('Fehler bei der GPT-Abfrage:', error);
+    console.error('Fehler bei der Tag-Generierung über den Proxy-Server:', error);
     return [];
   }
 }

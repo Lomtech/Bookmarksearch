@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Bookmark Tagger with GPT",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Erstellt automatisch Tags für Lesezeichen mit GPT und ermöglicht die Suche nach Tags.",
   "permissions": ["bookmarks", "storage"],
   "host_permissions": ["https://api.openai.com/*"],

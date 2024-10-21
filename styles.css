@@ -2,15 +2,13 @@ body {
   background-color: #e0f7fa; /* Pastell-blau für den Hintergrund */
   color: #00796b; /* Dunkleres Blaugrün für den Text */
   font-family: Arial, sans-serif;
-  margin: 80px; /* Entfernt den Standardrand */
-  padding: 0;
+  padding: 50px;
 }
 
 .popup {
   width: 100px; /* Größere Breite */
   height: 100px; /* Höhe passt sich dem Inhalt an */
   padding: 10px; /* Mehr Padding für den Inhalt */
-  margin: 10px auto; /* Zentriert das Popup im Fenster */
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 15px; /* Abgerundete Ecken */
@@ -21,20 +19,18 @@ body {
 
 h1 {
   color: #004d40; /* Dunkleres Blaugrün für die Überschrift */
-  text-align: center;
+  text-align: left;
   font-size: 20px; /* Größere Schriftgröße */
-  margin-bottom: 20px; /* Abstand zum nächsten Element */
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-bottom: 10px; /* Abstand zum nächsten Element */
 }
 
 
 input {
   width: 100%; /* Vollbreite für das Eingabefeld */
-  padding: 12px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 200px;
   border: 2px solid #00796b; /* Blaugrün */
   border-radius: 25px; /* Abgerundete Ecken für das Eingabefeld */
   background-color: #ffffff; /* Weiß für das Eingabefeld */
@@ -51,9 +47,8 @@ input:focus {
 ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 20px; /* Abstand von der Liste zum vorherigen Element */
-  margin-left: 20px;
-  margin-right:20px;
+  margin-top: 10px; /* Abstand von der Liste zum vorherigen Element */
+  margin-right: 10px;
 }
 
 li {
@@ -66,31 +61,25 @@ a {
   color: #004d40; /* Dunkleres Blaugrün für Links */
   font-weight: bold;
   display: block; /* Block-Element für bessere Klickbarkeit */
+  font-size: 15px;
 }
 
 a:hover {
-  color: #00796b; /* Hellere Blaugrünfarbe bei Hover */
-}
-
-h2 {
-  color: #004d40; /* Überschrift für Ergebnisse */
-  margin-top: 10px;
-  font-size: 20px;
-  text-align: center; /* Zentriert die Ergebnisüberschrift */
+  color: #1ac2ae; /* Hellere Blaugrünfarbe bei Hover */
 }
 
 #tagSection {
   margin-top: 20px;
   display: none; /* Standardmäßig ausgeblendet */
-  text-align: center;
+  text-align: left;
 }
 
 #saveTagButton {
   background-color: #00796b;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 10px 10px;
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
