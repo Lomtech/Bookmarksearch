@@ -61,7 +61,7 @@ a {
   color: #004d40; /* Dunkleres Blaugrün für Links */
   font-weight: bold;
   display: block; /* Block-Element für bessere Klickbarkeit */
-  font-size: 15px;
+  font-size: 13px;
 }
 
 a:hover {
